@@ -1,0 +1,18 @@
+{
+  "name": "cypress-assignment",
+  "version": "1.0.0",
+  "description": "Cypress challenge for job application",
+  "main": "index.js",
+  "scripts": {
+    "cy:run-all-tests": "npx cypress run",
+    "cy:run-frontend-tests": "npx cypress run --spec 'frontendTests.cy.js'",
+    "cy:run-api-tests": "npx cypress run --spec 'apiTests.cy.js'"
+  },
+  "author": "Victor Camilo",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^9.8.0",
+    "cypress": "^14.5.0",
+    "cypress-mochawesome-reporter": "^3.8.2"
+  }
+}
