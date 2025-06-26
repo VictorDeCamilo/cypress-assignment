@@ -2,14 +2,6 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   projectId: "z9cbmr",
-  reporter: "cypress-mochawesome-reporter",
-  reporterOptions: {
-    charts: true,
-    reportPageTitle: "Cypress - Assignment",
-    embeddedScreenshots: true,
-    inlineAssets: true,
-    saveAllAttempts: false,
-  },
   retries: { runMode: 2 },
   watchForFileChanges: false,
   env: {
@@ -17,8 +9,6 @@ module.exports = defineConfig({
     frontUrl: "https://front.serverest.dev",
   },
   e2e: {
-    setupNodeEvents(on, config) {
-      require("cypress-mochawesome-reporter/plugin")(on);
-    },
+    setupNodeEvents(on, config) {},
   },
 });
