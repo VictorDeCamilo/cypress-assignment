@@ -1,87 +1,81 @@
 # Cypress - Assignment
 
-Este projeto tem como objetivo apresentar um desafio completo de testes automatizados utilizando Cypress para validar tanto a API REST quanto a interface web disponibilizadas em:
+This project aims to present a complete automated testing challenge using Cypress to validate both the **REST API** and the **web interface** available at:
 
-🧪 API: https://serverest.dev
-
+🧪 API: https://serverest.dev  
 🖥️ Frontend: https://front.serverest.dev
 
-## ✅ Tecnologias e Ferramentas
+## ✅ Technologies and Tools
 
-**Cypress** para automação de testes end-to-end
+- **Cypress** for end-to-end test automation
+- **Faker** for dynamic test data generation
+- **GitHub Actions** for Continuous Integration (CI)
+- **Cypress Cloud** for remote execution, dashboards, and test traceability
 
-**Faker** para geração dinâmica de dados de teste
+## 🎯 Project Goal
 
-**GitHub Actions** para integração contínua (CI)
+Build a reliable and well-structured test suite capable of:
 
-**Cypress Cloud** para execução remota, dashboards e rastreabilidade de execuções
+- Validating complete application flows (Register, Login, Products, Cart, etc.)
+- Verifying frontend and backend integration
+- Serving as a hands-on exercise or technical assessment
 
-## 🎯 Objetivo do Projeto
+## ⚙️ Features and Strategies
 
-Criar uma suíte de testes confiável e organizada que possa:
+### ✅ Continuous Integration with GitHub Actions
 
-- Validar fluxos completos da aplicação (Cadastro, Login, Produtos, Carrinho, etc.)
-
-- Verificar integrações entre frontend e backend
-
-- Servir como exercício prático ou avaliação técnica
-
-## ⚙️ Funcionalidades e Estratégias Adotadas
-
-### ✅ Integração Contínua com GitHub Actions
-
-O projeto executa os testes automaticamente a cada push ou pull request usando GitHub Actions, com integração direta com o Cypress Cloud. Isso garante feedback rápido e visibilidade em tempo real dos testes.
+The project runs tests automatically on every push or pull request using GitHub Actions, with direct integration with Cypress Cloud. This ensures fast feedback and real-time visibility of executions.
 
 ### ✅ Cypress Cloud
 
-Os testes são enviados para o Cypress Cloud, onde é possível acompanhar:
+Tests are uploaded to Cypress Cloud, allowing for:
 
-- Status de execuções
+- Execution status monitoring
+- Screenshots and videos of test runs
+- Build history and insights
 
-- Screenshots e vídeos
+### ✅ Data Generation with Faker
 
-- Histórico de builds
+All tests use randomly generated data through the Faker library to:
 
-### ✅ Geração de Dados com Faker
+- Avoid data collisions
+- Ensure independent test execution
+- Simulate more realistic scenarios
 
-Todos os testes utilizam dados randômicos gerados pela biblioteca Faker para:
+### ✅ Typed Custom Commands
 
-- Evitar conflitos de dados
+All custom Cypress commands were fully typed to support autocomplete and type checking. This:
 
-- Garantir testes independentes
+- Enhances developer experience while writing tests
+- Makes onboarding easier for new team members
+- Increases maintainability and consistency of the codebase
 
-- Simular cenários mais realistas
+## 🧪 How to Run Locally
 
-### ✅ Tipagem de Custom Commands
+### Install dependencies
 
-Todos os comandos customizados foram tipados com suporte a autocompletar e verificação de tipos. Isso:
+```bash
+npm install
+```
 
-- Melhora a experiência durante a escrita dos testes
+### Run tests in interactive mode
 
-- Facilita o onboarding de novos desenvolvedores/testadores
+```bash
+npx cypress open
+```
 
-- Garante maior controle e manutenção do projeto
+### Run tests in headless mode
 
-## 🧪 Como Executar Localmente
+```bash
+npx cypress run
+```
 
-### Instale as dependências
+## Run with GitHub Actions
 
-`npm install`
+Tests are automatically executed via CI. You can view the workflow runs in the Actions tab of the repository.
 
-### Execute os testes no modo interativo
+## 👨‍💻 Author
 
-`npx cypress open`
+Project developed by **Victor Gomes de Camilo**
 
-### Execute os testes em modo headless
-
-`npx cypress run`
-
-## ☁️ Executar no GitHub Actions
-
-Os testes são executados automaticamente via CI. Você pode visualizar o fluxo no menu Actions do repositório.
-
-## 👨‍💻 Autor
-
-Projeto desenvolvido por **Victor Gomes de Camilo**
-
-SDET focado em qualidade de software, automação e integração contínua.
+SDET focused on software quality, automation, and continuous integration.
