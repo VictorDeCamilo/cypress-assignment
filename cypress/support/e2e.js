@@ -18,3 +18,5 @@ import "./commands";
 import "./api/users";
 import "./api/login";
 import "./front/products";
+import "./api/products";
+import "./api/cart";

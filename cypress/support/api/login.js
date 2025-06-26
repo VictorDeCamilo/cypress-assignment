@@ -15,3 +15,12 @@ Cypress.Commands.add("loginViaAPI", (userData) => {
     window.localStorage.setItem("serverest/userPassword", userData.password);
   });
 });
+
+Cypress.Commands.add("generateUserToken", (user) => {
+  cy.createUserAPI(user).then(({ status, body }) => {
+    expect(status).to.eq(201);
+    expect(body.message).to.contain("Cadastro realizado com sucesso");
+
+    cy.loginViaAPI(user);
+  });
+});
