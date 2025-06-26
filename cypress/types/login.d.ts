@@ -10,6 +10,12 @@ declare global {
       loginViaAPI(
         userData: object
       ): Chainable<{ message: string; authorization: string }>;
+
+      /**
+       * @description Requisição para gerar token de usuário e setar no localStorage
+       * @param {object} userData - Objeto com as informações do usuário
+       */
+      generateUserToken(user: object);
     }
   }
 }

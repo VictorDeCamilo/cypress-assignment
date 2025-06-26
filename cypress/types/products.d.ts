@@ -26,6 +26,20 @@ declare global {
        * @product Objeto com as informações do produto
        */
       createProductViaFRONT(product: object);
+
+      /**
+       * @description Requisição para criação de produtos via API
+       * @product Objeto com as informações do produto
+       * @token Token de autenticação
+       */
+      createProductAPI(product: object, token: string);
+
+      /**
+       * @description Requisição para consulta de detalhes de produto via API
+       * @productId ID do produto
+       * @token Token de autenticação
+       */
+      findOneProduct(productId: string, token: string);
     }
   }
 }

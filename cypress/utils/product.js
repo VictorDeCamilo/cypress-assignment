@@ -11,3 +11,14 @@ export const newProduct = () => {
 
   return data;
 };
+
+export const cartProducts = (productId, quantity) => {
+  const data = [
+    {
+      idProduto: productId,
+      quantidade: quantity,
+    },
+  ];
+
+  return data;
+};

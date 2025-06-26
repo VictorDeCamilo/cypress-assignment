@@ -7,11 +7,7 @@ describe("Testes de Frontend", () => {
   context("Cenários com usuário comum", () => {
     beforeEach(() => {
       let user = users.validCommonUser();
-      cy.createUserAPI(user).then(({ status, body }) => {
-        expect(status).to.eq(201);
-        expect(body.message).to.contain("Cadastro realizado com sucesso");
-
-        cy.loginViaAPI(user);
+      cy.generateUserToken(user).then(() => {
         cy.visit("https://front.serverest.dev/home");
       });
     });
@@ -59,11 +55,7 @@ describe("Testes de Frontend", () => {
   context("Cenários com usuário administrador", () => {
     beforeEach(() => {
       let user = users.validAdminUser();
-      cy.createUserAPI(user).then(({ status, body }) => {
-        expect(status).to.eq(201);
-        expect(body.message).to.contain("Cadastro realizado com sucesso");
-
-        cy.loginViaAPI(user);
+      cy.generateUserToken(user).then(() => {
         cy.visit("https://front.serverest.dev/admin/home");
       });
     });
