@@ -13,6 +13,5 @@ Cypress.Commands.add("loginViaAPI", (userData) => {
     window.localStorage.setItem("serverest/userToken", body.authorization);
     window.localStorage.setItem("serverest/userEmail", userData.email);
     window.localStorage.setItem("serverest/userPassword", userData.password);
-    cy.visit("https://front.serverest.dev/home");
   });
 });

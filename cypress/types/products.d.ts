@@ -20,6 +20,12 @@ declare global {
        * @as Alias do nome do produto
        */
       getProductName(as: string);
+
+      /**
+       * @description Comando para criar novo produto via FRONT, preenchendo os campos da tela de novo produto
+       * @product Objeto com as informações do produto
+       */
+      createProductViaFRONT(product: object);
     }
   }
 }
